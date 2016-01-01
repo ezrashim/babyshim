@@ -1,0 +1,18 @@
+<div class="image">
+<img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
+</div>
+
+<h3>Estimate</h3>
+<h3>  <%= "#{@days_left}" %> </h3>
+<h3>days</h3>
+<h3>until baby Shim comes to the world.</h3>
+
+<h3>Messages</h3>
+
+<ul> <% @comments.each do |comment| %>
+  <li>
+    <h4> <%= "Message from #{comment.first_name} #{comment.last_name}" %> </h4>
+    <h5> <%= comment.comment %> </h5>
+  </li>
+  <% end %>
+</ul>
