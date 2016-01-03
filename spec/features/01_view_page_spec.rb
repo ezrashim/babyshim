@@ -33,8 +33,10 @@ feature 'view page' do
   end
 
   scenario 'view page with an image' do
+    url = "http://i.imgur.com/XtHclMx.gif?1"
+
     visit '/'
-    locate('#baby-pic'['src']).value("http://i.imgur.com/XtHclMx.gif?1")
+    expect(page).to have_css("#baby-pic")
   end
 
 

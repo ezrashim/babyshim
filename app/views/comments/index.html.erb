@@ -1,18 +1,35 @@
-<div class="image">
-<img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
+<div class="row">
+  <div class="small-12 medium-6 columns">
+
+        <div class="text-center">
+
+          <div id="countdown" style="width:150px; height:80px">
+            <script>
+            var myCountdown1 = new Countdown({year:2016, month: 5, day: 24, width: 150, height: 80, inline: false, rangeHi: "month", rangeLo: "day", labels: {font: 'Concert One'} });
+            </script>
+          </div>
+
+          <h3>left until Caleb Shim arrives!</h3>
+        </div>
+        <div class="small-6 small-centered columns" id="leave_message">
+          <div class="text-center">
+            <a href="#" class="button round">Leave a Message!</a>
+          </div>
+        </div>
+
+  </div>
+
+  <div class="small-12 medium-6 columns">
+    <img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
+  </div>
 </div>
 
-<h3>Estimate</h3>
-<h3>  <%= "#{@days_left}" %> </h3>
-<h3>days</h3>
-<h3>until baby Shim comes to the world.</h3>
 
-<h3>Messages</h3>
 
 <ul> <% @comments.each do |comment| %>
   <li>
-    <h4> <%= "Message from #{comment.first_name} #{comment.last_name}" %> </h4>
     <h5> <%= comment.comment %> </h5>
+    <h4> <%= "From #{comment.first_name} #{comment.last_name}" %> </h4>
   </li>
   <% end %>
 </ul>
