@@ -3,7 +3,7 @@ require 'rails_helper'
 
 feature 'view page' do
   scenario 'view page with all comments' do
-    @comments = FactoryGirl.create_list(:comment, 15)
+    @comments = create_list(:comment, 15)
     first_comment = @comments.first
     first_name_1 = first_comment.first_name
     last_name_1 = first_comment.last_name
@@ -23,21 +23,10 @@ feature 'view page' do
     expect(page).to have_content(comment_2)
   end
 
-  scenario 'view page with timer' do
-    due_date = Date.new(2016,5,24)
-    today = Date.today
-    days_left = (due_date - today).to_i
-
-    visit '/'
-    expect(page).to have_content("Estimate #{days_left} days until baby Shim comes to the world.")
-  end
-
   scenario 'view page with an image' do
     url = "http://i.imgur.com/XtHclMx.gif?1"
 
     visit '/'
     expect(page).to have_css("#baby-pic")
   end
-
-
 end

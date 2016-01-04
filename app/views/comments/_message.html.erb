@@ -1,0 +1,28 @@
+<%= form_for @comment do |f|%>
+<div class="row">
+  <div class="small-6 columns">
+    <%= f.label :first_name, "First Name", :class => 'form' %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="small-6 columns">
+    <%= f.label :last_name, "Last Name", :class => 'form' %>
+    <%= f.text_field :last_name %>
+  </div>
+</div>
+
+  <div>
+    <%= f.label :email, "Email", :class => 'form' %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :comment, "Message", :class => 'form' %>
+    <%= f.text_area :comment, size: "20x10" %>
+  </div>
+
+  <div>
+    <%= f.submit "Submit", :class => 'button round'%>
+  </div>
+
+<% end %>

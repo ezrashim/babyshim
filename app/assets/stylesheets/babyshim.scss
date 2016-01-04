@@ -1,1 +1,26 @@
 
+$baby-blue: #5CACC4;
+$baby-green: #8CD19D;
+$baby-yellow-green: #CEE879;
+$baby-orange: #FCB653;
+$baby-red: #FF5254;
+
+li h5 {
+  color: $baby-green;
+}
+
+li h6 {
+  color: $baby-yellow-green;
+}
+
+#flash {
+  color: $baby-red;
+}
+
+.title {
+  color: $baby-orange;
+}
+
+.form {
+  color: $baby-blue;
+}

@@ -14,7 +14,7 @@
         </div>
         <div class="small-6 small-centered columns" id="leave_message">
           <div class="text-center">
-            <a href="#" class="button round">Leave a Message!</a>
+            <a href=" <%= new_comment_path %> " class="button round">Leave a Message!</a>
           </div>
         </div>
 
@@ -26,11 +26,14 @@
 </div>
 
 
-
-<ul> <% @comments.each do |comment| %>
-  <li>
-    <h5> <%= comment.comment %> </h5>
-    <h4> <%= "From #{comment.first_name} #{comment.last_name}" %> </h4>
-  </li>
-  <% end %>
-</ul>
+<div class="small-12 columns">
+  <div class="text-center">
+    <ul> <% @comments.each do |comment| %>
+      <li>
+        <h5> <%= comment.comment %> </h5>
+        <h6> <%= "From #{comment.first_name} #{comment.last_name}" %> </h6>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
