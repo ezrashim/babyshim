@@ -16,8 +16,33 @@ class CommentsController < ApplicationController
       redirect_to comments_path
     else
       flash.now[:notice] = @comment.errors.full_messages
+      render "edit"
+    end
+  end
+
+  def update
+    binding.pry
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    if @comment.save
+      flash[:notice] = ["Your message has been updated"]
+      redirect_to comments_path
+    else
+      flash.now[:notice] = @comment.errors.full_messages
       render "new"
     end
+  end
+
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    flash[:notice] = ["Your message has been deleted"]
+    redirect_to comments_path
   end
 
   private
