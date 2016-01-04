@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Your message has been posted!"
       redirect_to comments_path
     else
-      flash[:notice] = "Could you fill in all the fields please?"
+      flash.now[:notice] = @comment.errors.full_messages
       render "new"
     end
   end
