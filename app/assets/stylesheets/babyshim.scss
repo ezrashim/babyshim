@@ -10,13 +10,17 @@ $gray: #6A6B5F;
 
 li h5 {
   color: $gray;
-font-family: 'Actor', sans-serif;
+  font-family: 'Actor', sans-serif;
       }
-      
+
 li h6 {
   color: $gray;
-font-family: 'Actor', sans-serif;
+  font-family: 'Actor', sans-serif;
       }
+
+#button, #round {
+  font-family: 'Concert One', cursive;
+}
 
 .flash {
   color: $baby-red;

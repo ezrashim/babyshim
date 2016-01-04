@@ -2,22 +2,22 @@
 <div class="row">
   <div class="small-6 columns">
     <%= f.label :first_name, "First Name", :class => 'form' %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: 'form' %>
   </div>
 
   <div class="small-6 columns">
-    <%= f.label :last_name, "Last Name", :class => 'form' %>
-    <%= f.text_field :last_name %>
+    <%= f.label :last_name, "Last Name", class: 'form' %>
+    <%= f.text_field :last_name, class: 'form' %>
   </div>
 </div>
 
   <div>
-    <%= f.label :email, "Email", :class => 'form' %>
-    <%= f.text_field :email %>
+    <%= f.label :email, "Email", class: 'form' %>
+    <%= f.text_field :email, class: "form" %>
   </div>
 
   <div>
-    <%= f.label :comment, "Message", :class => 'form' %>
+    <%= f.label :comment, "Message", class: 'form' %>
     <%= f.text_area :comment, size: "20x10" %>
   </div>
 
