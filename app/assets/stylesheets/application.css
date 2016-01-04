@@ -16,8 +16,9 @@
 
  */
 
- h3 {
-   margin-bottom: 50px;
+ h4 {
+   margin-top: 15px;
+   margin-bottom: 30px;
  }
 
  img {
@@ -28,9 +29,11 @@
  #countdown {
    display: block;
    margin: 15px auto;
-   margin-top: 50px;
+   margin-top: 15px;
+   margin-bottom: 40px;
  }
 
  #leave_message {
    margin: auto auto;
+   margin-top: 50px;
  }
