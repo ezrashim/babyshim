@@ -21,7 +21,6 @@ class CommentsController < ApplicationController
   end
 
   def update
-    binding.pry
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
     if @comment.save
