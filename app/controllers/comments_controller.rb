@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      flash[:notice] = "Your message has been posted!"
+      binding.pry
+      flash[:notice] = ["Your message has been posted"]
       redirect_to comments_path
     else
       flash.now[:notice] = @comment.errors.full_messages

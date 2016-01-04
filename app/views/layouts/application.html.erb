@@ -20,9 +20,9 @@
     <div class="small-centered row column">
       <div class="text-center">
         <% unless flash[:notice].nil? %>
-        <% flash[:notice].each do |notice| %>
-        <h5 class="flash"> <%= notice %>. </h5>
-        <% end %>
+          <% flash[:notice].each do |notice| %>
+          <h6 class="flash"> <%= notice %>. </h5>
+          <% end %>
         <% end %>
       </div>
       <%= yield %>
