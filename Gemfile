@@ -15,7 +15,6 @@ gem 'factory_girl_rails'
 gem 'foundation-rails'
 gem 'rails_12factor', group: :production
 gem 'puma'
-gem 'devise'
 
 group :development, :test do
   gem 'byebug'
