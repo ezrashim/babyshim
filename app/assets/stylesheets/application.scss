@@ -1,0 +1,34 @@
+@import 'foundation_and_overrides';
+@import 'babyshim';
+
+ h3 {
+   margin-top: 15px;
+   margin-bottom: 30px;
+ }
+
+ img {
+   display: block;
+   margin: 15px auto;
+ }
+
+ #countdown {
+   display: block;
+   margin: 15px auto;
+   margin-top: 15px;
+   margin-bottom: 40px;
+ }
+
+ #leave_message {
+   margin: auto auto;
+   margin-top: 50px;
+ }
+
+ ul {
+   list-style-type: none;
+   margin-top: 50px;
+   margin-left: 0px;
+ }
+
+ li {
+   margin-bottom: 30px;
+ }

@@ -1,0 +1,28 @@
+<h1 class="title">Your Message</h1>
+
+
+<div class="small-12 columns">
+  <div class="text-center">
+    <ul>
+      <li>
+        <div class="row">
+
+          <div class="small-6 small-centered columns">
+            <h5 class="text-center"> <%= @comment.comment %> </h5>
+            <h6> <%= "From. #{@comment.first_name} #{@comment.last_name}" %> </h6>
+          </div>
+
+          <div class="small-6 small-centered columns">
+            <div class="text-center">
+              <%= link_to 'Edit', edit_comment_path(@comment), :method => :get, class: "button round" %>
+              <%= link_to 'Delete', comment_path(@comment), :method => :delete, class: "button round" %>
+              <%= link_to 'Confirm', comments_path, class: "button round" %>
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
