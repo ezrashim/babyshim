@@ -24,28 +24,3 @@
     <img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
   </div>
 </div>
-
-
-<div class="small-12 columns">
-  <div class="text-center">
-    <ul> <% @comments.each do |comment| %>
-      <li>
-        <div class="row">
-          <div class="small-11 columns">
-            <h5> <%= comment.comment %> </h5>
-            <h6> <%= "From. #{comment.first_name} #{comment.last_name}" %> </h6>
-          </div>
-          <div class="small-1 columns">
-            <div class="row">
-              <%= link_to 'i', edit_comment_path(comment), :method => :get, :class => 'edit' %>
-            </div>
-            <div class="row">
-              <%= link_to 'X', comment_path(comment), :method => :delete, :class => 'edit' %>
-            </div>
-          </div>
-        </div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-</div>

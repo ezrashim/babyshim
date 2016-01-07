@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
       @image = "http://i.imgur.com/XtHclMx.gif?1"
   end
 
+  def show
+    @comment = Comment.find(params[:id])
+
+  end
+
   def new
     @comment = Comment.new
   end
@@ -12,8 +17,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      flash[:notice] = ["Your message has been posted"]
-      redirect_to comments_path
+      flash[:notice] = ["Thanks! Your message will be sent"]
+      redirect_to comment_path(@comment[:id])
     else
       flash.now[:notice] = @comment.errors.full_messages
       render "edit"
