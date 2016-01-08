@@ -1,7 +1,11 @@
 class CommentsController < ApplicationController
 
+  def view
+    @image = "http://i.imgur.com/XtHclMx.gif?1"
+  end
+
   def index
-      @image = "http://i.imgur.com/XtHclMx.gif?1"
+    @comments = Comment.all.reverse
   end
 
   def show
@@ -15,7 +19,6 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      flash[:notice] = ["Thanks! Your message will be sent"]
       redirect_to comment_path(@comment[:id])
     else
       flash.now[:notice] = @comment.errors.full_messages
@@ -27,8 +30,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
     if @comment.save
-      flash[:notice] = ["Your message has been updated"]
-      redirect_to comments_path
+      redirect_to comment_path(@comment)
     else
       flash.now[:notice] = @comment.errors.full_messages
       render "new"
@@ -43,8 +45,8 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
 
-    flash[:notice] = ["Your message has been deleted"]
-    redirect_to comments_path
+    flash[:notice] = ["No worries. We deleted your message :)"]
+    redirect_to root_path
   end
 
   private

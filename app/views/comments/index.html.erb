@@ -1,26 +1,25 @@
-<div class="row">
-  <div class="small-12 medium-6 columns">
+<div class="small-12 columns text-center">
+  <h1 class="title">Thank you!</h1>
+</div>
 
-        <div class="text-center">
-          <h3>Jean and Ezra are proud to announce:</h3>
-          <h5>approximately</h5>
-          <div id="countdown" style="width:150px; height:80px">
-            <script>
-            var myCountdown1 = new Countdown({year:2016, month: 5, day: 24, width: 150, height: 80, inline: false, rangeHi: "month", rangeLo: "day", labels: {font: 'Concert One'} });
-            </script>
-          </div>
-
-          <h3>left until baby Shim arrives!</h3>
-        </div>
-        <div class="small-6 small-centered columns" id="leave_message">
-          <div class="text-center">
-            <a href=" <%= new_comment_path %> " class="button round">Leave a Message!</a>
-          </div>
-        </div>
-
+<div class="small-6 small-centered columns">
+  <div class="text-center">
+    <%= link_to 'Home', root_path, class: "button round", id: 'home' %>
   </div>
+</div>
 
-  <div class="small-12 medium-6 columns">
-    <img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
+<div class="small-12 columns">
+  <div class="text-center">
+    <ul>
+      <li>
+        <div class="row"><% @comments.each do |comment| %>
+          <div class="small-12 small-centered columns">
+            <h4 class="text-center"> <%= comment.comment %> </h5>
+            <h6> <%= "From. #{comment.first_name} #{comment.last_name}" %> </h6>
+          </div>
+          <% end %>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
