@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="small-12 medium-6 columns">
+
+        <div class="text-center">
+          <h3>Jean and Ezra are proud to announce:</h3>
+          <h5>approximately</h5>
+          <div id="countdown" style="width:150px; height:80px">
+            <script>
+            var myCountdown1 = new Countdown({year:2016, month: 5, day: 24, width: 150, height: 80, inline: false, rangeHi: "month", rangeLo: "day", labels: {font: 'Concert One'} });
+            </script>
+          </div>
+
+          <h3>left until baby Shim arrives!</h3>
+        </div>
+        <div class="small-6 small-centered columns" id="leave_message">
+          <div class="text-center">
+            <a href=" <%= new_comment_path %> " class="button round">Leave a Message!</a>
+          </div>
+        </div>
+
+  </div>
+
+  <div class="small-12 medium-6 columns">
+    <img src= " <%= "#{@image}" %> " alt="baby-pic" id="baby-pic" />
+  </div>
+</div>

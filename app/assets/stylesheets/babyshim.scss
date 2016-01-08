@@ -1,4 +1,3 @@
-
 $baby-blue: #5CACC4;
 $baby-green: #8CD19D;
 $baby-yellow-green: #CEE879;
@@ -30,6 +29,8 @@ li h6 {
 
 .title {
   color: $baby-orange;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .form {
@@ -38,4 +39,40 @@ li h6 {
 
 .edit {
   color: $baby-orange;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  margin: 15px auto;
+}
+
+#countdown {
+  display: block;
+  margin: 15px auto;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+#leave_message {
+  margin: auto auto;
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+#home {
+  margin-top: 50px;
 }
