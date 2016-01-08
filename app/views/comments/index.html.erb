@@ -14,7 +14,7 @@
       <li>
         <div class="row"><% @comments.each do |comment| %>
           <div class="small-12 small-centered columns">
-            <h4 class="text-center"> <%= comment.comment %> </h5>
+            <h5 class="text-center"> <%= comment.comment %> </h5>
             <h6> <%= "From. #{comment.first_name} #{comment.last_name}" %> </h6>
           </div>
           <% end %>
