@@ -10,7 +10,7 @@ My first client, my wife, asked me if I could build a simple web app to announce
 - PostgreSQL (version 9.4.5.0)
 - Foundation 5
 
-##Setting Up
+##How to Set Up on a Local Machine
 
 - Verify that you have the correct version of Ruby installed (version 2.0.0) by running the command in the command line:
 ```
@@ -52,4 +52,4 @@ rails s
 - To open the app in a browser, type URL:
 ```
 localhost:3000
-``` 
+```
