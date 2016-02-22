@@ -31,7 +31,7 @@ $ rails --version
 ```
 If it says something like "Rails 4.2.1", you are ready to continue.
 
-- To access to app, you need to clone the repository and install bundle. All required gems are listed in the Gemfile.
+- To access the app, you need to clone the repository and install bundle. All required gems are listed in the Gemfile.
 - Install [bundle](http://bundler.io/).
 ```
 git clone github.com/ezrashim/mycademy.git
@@ -49,7 +49,7 @@ rake db:migrate
 ```
 rails s
 ```
-- To open the app in a browser, type URL:
+- To open the app in a browser, type in URL:
 ```
 localhost:3000
 ```
